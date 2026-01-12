@@ -32,7 +32,8 @@ if (!gameRunning || board[index] !== "") return;
   }
 
   if (checkWinner()) {
-    statusDiv.textContent = `${currentPlayer} wins!`;
+    statusDiv.textContent = `${currentPlayer} congratulation!`
+    ;
     gameRunning = false;
     return;
   }
@@ -69,3 +70,4 @@ function restartGame() {
 
 cells.forEach(cell => cell.addEventListener("click", handleCellClick));
 restartBtn.addEventListener("click", restartGame);
+
